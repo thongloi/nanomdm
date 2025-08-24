@@ -25,7 +25,7 @@ COPY --from=build /out/nano2nano /app/nano2nano
 # ✅ คัดลอกไฟล์ CA และ APNs เข้า image
 # ต้องแน่ใจว่าโฟลเดอร์ ./ca และ ./certs อยู่ใน repo ของคุณ
 COPY ./ca/ca.pem /data/ca/ca.pem
-COPY ./certs/mdm_push.p8 /data/certs/mdm_push.p8
+#COPY ./certs/mdm_push.p8 /data/certs/mdm_push.p8
 
 # ไม่ใช้ VOLUME (Railway ห้าม) — ไป mount เป็น Railway Volume แทน
 EXPOSE 9000
