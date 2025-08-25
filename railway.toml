@@ -1,0 +1,16 @@
+[service]
+name = "nanomdm"
+
+# Start Command (บังคับมี -ca)
+start = """
+/app/nanomdm \
+  -http :9000 \
+  -ca /data/ca/ca.pem \
+  -storage postgres \
+  -storage-dsn "postgresql://USER:PASS@HOST:5432/railway?sslmode=disable"
+"""
+
+[volumes]
+mounts = [
+  { volume = "nanomdm-data", path = "/data" }
+]
