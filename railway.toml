@@ -7,7 +7,7 @@ start = """
   -http :9000 \
   -ca /data/ca/ca.pem \
   -storage postgres \
-  -storage-dsn "postgresql://USER:PASS@HOST:5432/railway?sslmode=disable"
+  -storage-dsn "postgresql://postgres:xupQWGgNgRoAIwXWlhtFFhEvMtohIupS@postgres.railway.internal:5432/railway"
 """
 
 [volumes]
